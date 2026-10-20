@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090b12">
+<title>HEADSHOT RECOIL</title>
+<style>
+:root{--bg:#090b12;--panel:#121724;--line:#283246;--red:#ff354d;--orange:#ff8a3d;--muted:#9aa7bb;--white:#f5f7fb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#29213b 0,#090b12 48%);color:var(--white);font-family:Inter,system-ui,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:480px;margin:auto;padding:22px 18px 34px}.top{display:flex;align-items:center;gap:12px;margin:8px 0 24px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--red),var(--orange));display:grid;place-items:center;font-size:25px;box-shadow:0 8px 30px #ff354d35}.eyebrow{font-size:10px;letter-spacing:2.6px;color:var(--orange);font-weight:800}.brand{font-weight:950;letter-spacing:1px;font-size:18px;margin-top:3px}.hero{padding:23px 21px;border:1px solid #3b2a3c;border-radius:25px;background:linear-gradient(140deg,#211625,#111724 60%,#171b29);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;right:18px;top:10px;font-size:90px;color:#ff354d12}.tag{display:inline-flex;padding:6px 9px;border-radius:7px;background:#ff354d18;color:#ff6879;font-size:10px;font-weight:900;letter-spacing:1.5px}.hero h1{font-size:32px;line-height:1.05;margin:17px 0 10px;letter-spacing:-1px}.hero p{color:#b5bfd0;font-size:13px;line-height:1.55;margin:0;max-width:300px}.section{margin:23px 0 12px;display:flex;justify-content:space-between;align-items:center}.section h2{font-size:15px;margin:0}.section span{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.preset{border:1px solid var(--line);background:var(--panel);color:white;padding:15px 3px;border-radius:15px;font-size:19px;font-weight:900;cursor:pointer}.preset small{display:block;font-size:9px;color:var(--muted);font-weight:700;margin-top:5px}.preset.active{border-color:var(--red);background:linear-gradient(180deg,#4a202d,#201721);box-shadow:0 0 0 1px #ff354d28}.card{border:1px solid var(--line);background:linear-gradient(145deg,#151b29,#10141e);border-radius:19px;padding:17px;margin-top:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.row strong{font-size:14px}.desc{font-size:11px;color:var(--muted);line-height:1.45;margin-top:5px}.switch{width:48px;height:28px;border-radius:30px;background:#30394a;padding:4px;cursor:pointer;flex-shrink:0}.switch:after{content:"";display:block;width:20px;height:20px;border-radius:50%;background:#fff;transition:.18s}.switch.on{background:var(--red)}.switch.on:after{transform:translateX(20px)}.primary{width:100%;border:0;border-radius:15px;padding:16px;color:white;font-weight:900;letter-spacing:.5px;background:linear-gradient(100deg,#ff354d,#ff743e);font-size:14px;box-shadow:0 10px 28px #ff354d25;cursor:pointer;margin-top:15px}.secondary{width:100%;border:1px solid #344056;background:#171d2a;color:white;border-radius:14px;padding:14px;font-weight:800;cursor:pointer;margin-top:10px}.status{font-size:11px;color:#9fe4b2;margin-top:11px;min-height:16px}.notice{font-size:11px;line-height:1.5;color:#9ba7bb;padding:13px 14px;border:1px solid #263044;border-radius:13px;margin-top:18px}.footer{text-align:center;color:#657188;font-size:10px;margin-top:22px;letter-spacing:1px}button:active{transform:scale(.985)}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top"><div class="logo">🎯</div><div><div class="eyebrow">FREE FIRE TOOLKIT</div><div class="brand">HEADSHOT RECOIL</div><div style="font-size:11px;color:#ff8a3d;font-weight:800;letter-spacing:1.5px;margin-top:4px">h1ro._.tt</div></div></header>
+<section class="hero"><span class="tag">AIM • CONTROL • PERFORMANCE</span><h1>НАСТРОЙ СВОЮ<br>ИГРУ.</h1><p>Выбери профиль чувствительности и открой полезные инструменты для своего Android.</p></section>
+<div class="section"><h2>Профиль чувствительности</h2><span>ВЫБЕРИ ОДИН</span></div>
+<div class="grid" id="presets">
+<button class="preset" data-v="50">50%<small>CONTROL</small></button><button class="preset" data-v="60">60%<small>BALANCED</small></button><button class="preset active" data-v="80">80%<small>FAST AIM</small></button><button class="preset" data-v="99">99%<small>MAX FEEL</small></button>
+</div>
+<div class="section"><h2>Усилить телефон</h2><span>ИНСТРУМЕНТЫ</span></div>
+<div class="card"><div class="row"><div><strong>Режим производительности</strong><div class="desc">Показывает рекомендации для плавной игры</div></div><div class="switch" id="performance" role="switch" aria-checked="false" tabindex="0"></div></div></div>
+<div class="card"><div class="row"><div><strong>Очистка перед игрой</strong><div class="desc">Чек-лист: закрой лишние приложения и включи игровой режим</div></div><div class="switch" id="cleanup" role="switch" aria-checked="false" tabindex="0"></div></div></div>
+<button class="primary" id="apply">✓ СОХРАНИТЬ МОЙ ПРОФИЛЬ</button>
+<div class="status" id="status" aria-live="polite">Профиль 80% выбран. Готов к настройке.</div>
+<button class="secondary" id="telegram">✈ ПОЛУЧИТЬ БОЛЕЕ МОЩНЫЙ УСИЛИТЕЛЬ</button>
+<div class="notice"><b>Важно:</b> приложение сохраняет выбранный профиль и показывает советы. Оно не меняет чувствительность Free Fire автоматически и не может само увеличить FPS или очистить память без системных разрешений. Настройки 50–99% — это профили внутри приложения, а не гарантированный процент точности.</div>
+<div class="footer">HEADSHOT RECOIL · ANDROID EDITION</div>
+</main>
+<script>
+let selected=80;
+document.querySelectorAll('.preset').forEach(b=>b.addEventListener('click',()=>{selected=Number(b.dataset.v);document.querySelectorAll('.preset').forEach(x=>x.classList.toggle('active',x===b));document.getElementById('status').textContent=`Выбран профиль ${selected}%. Нажми «Сохранить мой профиль».`}));
+function toggle(el){el.classList.toggle('on');el.setAttribute('aria-checked',el.classList.contains('on')?'true':'false');}
+['performance','cleanup'].forEach(id=>{const el=document.getElementById(id);el.addEventListener('click',()=>toggle(el));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(el)}})});
+document.getElementById('apply').addEventListener('click',()=>{try{localStorage.setItem('hr_profile',String(selected));localStorage.setItem('hr_performance',document.getElementById('performance').classList.contains('on'));localStorage.setItem('hr_cleanup',document.getElementById('cleanup').classList.contains('on'));}catch(e){}document.getElementById('status').textContent=`✓ Профиль ${selected}% сохранён на этом устройстве.`});
+document.getElementById('telegram').addEventListener('click',()=>{window.location.href='https://t.me/h1roomaneett'});
+</script></body></html>
